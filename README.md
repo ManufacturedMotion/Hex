@@ -21,4 +21,5 @@ To find out info on what we're planning to change, [checkout our GitHub issues!]
 
 ### Hex3
 - In-Progress: July 2025 - Present
-- GNU GENERAL PUBLIC LICENSE V3
+- Code: GNU GENERAL PUBLIC LICENSE V3
+- CAD/PCBs: [Open Community License (OCL)](https://github.com/OpenCommunityLicence/OpenCommunityLicence?tab=readme-ov-file#open-community-license-ocl)
