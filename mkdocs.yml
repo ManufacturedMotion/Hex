@@ -1,0 +1,21 @@
+site_name: Hex Docs
+site_description: Documentation for the Hex project
+site_url: https://manufacturedmotion.github.io/Hex
+repo_url: https://github.com/ManufacturedMotion/Hex
+docs_dir: docs
+site_dir: site
+nav:
+  - Home: index.md
+  - Hex3:
+      - Overview: Hex3/index.md
+      - Raspberry Pi: Hex3/raspberry-pi.md
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+plugins:
+  - search
+extra:
+  version: 1.0.0
