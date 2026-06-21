@@ -1,0 +1,44 @@
+site_name: Hex Docs
+site_description: Documentation for the Hex project
+site_url: https://manufacturedmotion.github.io/Hex
+repo_url: https://github.com/ManufacturedMotion/Hex
+
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Home: index.md
+  - Hex1:
+      - Hex1/index.md
+  - Hex2:
+      - Hex2/index.md
+      - Getting Started: Hex2/getting-started.md
+      - Common Commands: Hex2/common-commands.md
+  - Hex3:
+      - Hex3/index.md
+      - Common Commands: Hex3/common-commands.md
+      - Raspberry Pi: Hex3/raspberry-pi.md
+  - Meet the Team: meet-the-team.md
+
+theme:
+  name: material
+  logo: images/favicon.png
+  features:
+    - navigation.indexes
+    - navigation.tracking
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+
+extra:
+  version: 1.0.0
