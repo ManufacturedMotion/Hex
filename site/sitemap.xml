@@ -2,14 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://manufacturedmotion.github.io/Hex/</loc>
-         <lastmod>2026-06-20</lastmod>
+         <lastmod>2026-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://manufacturedmotion.github.io/Hex/Hex1/</loc>
+         <lastmod>2026-06-21</lastmod>
+    </url>
+    <url>
+         <loc>https://manufacturedmotion.github.io/Hex/Hex2/</loc>
+         <lastmod>2026-06-21</lastmod>
     </url>
     <url>
          <loc>https://manufacturedmotion.github.io/Hex/Hex3/</loc>
-         <lastmod>2026-06-20</lastmod>
+         <lastmod>2026-06-21</lastmod>
     </url>
     <url>
          <loc>https://manufacturedmotion.github.io/Hex/Hex3/raspberry-pi/</loc>
-         <lastmod>2026-06-20</lastmod>
+         <lastmod>2026-06-21</lastmod>
     </url>
 </urlset>
