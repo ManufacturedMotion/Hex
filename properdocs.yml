@@ -17,6 +17,7 @@ nav:
   - Hex3:
       - Hex3/index.md
       - Common Commands: Hex3/common-commands.md
+      - Electronics Setup: Hex3/electronics-setup.md
       - Raspberry Pi: Hex3/raspberry-pi.md
   - Meet the Team: meet-the-team.md
 
