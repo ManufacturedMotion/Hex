@@ -3,9 +3,9 @@
 
 /// html | div.grid
 
-![Encoder wire harnesses](images/encoder_wire.png)
+![Encoder wire harnesses](images/encoder_wire.jpeg)
 
-![Motor wire harnesses](images/motor_wire.png)
+![Motor wire harnesses](images/motor_wire.jpeg)
 
 ///
 

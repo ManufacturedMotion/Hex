@@ -11,7 +11,7 @@ The current Hexapod release is **Hex3**. Hex4 is currently under development, wi
 Like Tony Stark and his suits, we are continually expanding on the capabilities of the Hexapod platform. Unlike Tony Stark, we hope not to need
 85+ different iterations.
 
-![Hex3 bots at OpenSauce](docs/Hex3/images/hex3_all_bots_opensauce.png)
+![Hex3 bots at OpenSauce](docs/Hex3/images/hex3_all_bots.jpeg)
 
 If you want to build your own or join the community, check out our [Hex Discord](https://discord.gg/v3bbvRtFUr).
 

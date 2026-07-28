@@ -1,6 +1,6 @@
 # Hex 3
 
-![Hex3 All Bots](images/hex3_all_bots_opensauce.png)
+![Hex3 All Bots](images/hex3_all_bots.jpeg)
 
 ## Overview
 
@@ -29,9 +29,9 @@ Price point: ~$2,000 USD.
 
 /// html | div.grid
 
-![Hex3 Hex2 Comparison Bots](images/hex3_hex2_comparison.png)
+![Hex3 Hex2 Comparison Bots](images/hex3_hex2_comparison.jpeg)
 
-![Hex3 Printer on Top](images/hex3_printer_on_top.png)
+![Hex3 Printer on Top](images/hex3_printer_on_top.jpeg)
 
 ///
 
