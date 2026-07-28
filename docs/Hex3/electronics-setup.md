@@ -1,6 +1,14 @@
 
 ## Wire Lengths
 
+/// html | div.grid
+
+![Encoder wire harnesses](images/encoder_wire.png)
+
+![Motor wire harnesses](images/motor_wire.png)
+
+///
+
 | Connection | End 1 Connector | End 2 Connector | Wire Length | Wire Type | Quantity |
 |:-----------|:----------------|:----------------|------------:|:----------|---------:|
 | S0 Encoder <> Leg PCB | None | 4 Pin JST XH Female Socket Housing | 120 mm | 4 Conductor 24 AWG | 6 |
