@@ -1,3 +1,44 @@
+## Power Wiring
+
+The power for the Hexapod comes from a 5Ah Milwaukee M18 battery. Power is sent to the main PCB and distributed from there. A relay handles turning the Hexapod on and off via a latching power switch.
+
+The connections are: 
+
+| Component | Connection |
+|-----------|------------|
+| M18 Battery (+) | WAGO → Relay Pin 30 and latching switch input |
+| M18 Battery (-) | WAGO → Relay Pin 85 and robot ground |
+| Latching Switch Input | Battery + |
+| Latching Switch Output | Relay Pin 86 |
+| Hexapod Power (+) | Relay Pin 87 |
+| Hexapod Ground (-) | Battery - |
+
+The JD2914 relay pinout is:
+
+| Relay Pin | Function | Connects To | Wire Color (Recommended) | Notes |
+|------------|----------|-------------|--------------------------|-------|
+| **30** | Common (COM) | Battery | Red | Main power input from the M18 battery |
+| **87** | Normally Open (NO) | Robot power **+** | Red | Connected to Pin 30 when the relay is energized |
+| **87a** | Normally Closed (NC) | *Not connected* | — | Leave unused and insulated |
+| **85** | Coil (-) | Battery **-** | Black | Relay coil ground |
+| **86** | Coil (+) | Output of the latching power switch | Red | Energizes the relay when the switch is ON |
+
+![Hex3 Power Schematic](images/hex3_power_schematic.jpg)
+
+![Hex3 Power Wiring](images/hex3_power_wiring.jpeg)
+
+---
+
+## Raspberry Pi Wiring
+
+!!! note
+    Due to noise from the buck converters + relay combination, the Raspberry Pi 5 needs to be booted after the Hexapod is powered on. 
+
+This power cycling can be easily handled via the Raspberry Pi 5's built in power button vias. We recommend using right angle headers and wiring in a momentary power button to trigger the restart (Hex3's lid has a hole for a momentary power switch).
+
+Follow [these Raspberry Pi docs](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#add-your-own-power-button) on adding your own power button.
+
+---
 
 ## Wire Lengths
 
@@ -86,7 +127,7 @@
 
 3. Turn off the hexapod and move the leg to the calibration position and plug in the Xiao RP2350 on the mainboard.
 
-    ![calibration instructions](calibration_instructions.png)
+    ![calibration instructions](images/calibration_instructions.png)
 
     1. S1 should be parallel with the side panel of the hexapod.
     2. S2 should be as far down as it can go. The 3 wires going into S1 must be laid out flush (the distance between S1 and S2 is exactly 1 wire diameter).
@@ -126,3 +167,4 @@
 6. Upload the code to the leg and make sure it is in a standing position. (Confirm in `USER_CONFIG.HPP` that you set the correct `LEG_NUMBER`).
 
 7. Repeat for all 6 legs.
+
