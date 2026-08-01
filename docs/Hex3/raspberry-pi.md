@@ -1,6 +1,6 @@
 # Raspberry Pi Setup
 
-This section will walk you through configuring the Raspberry Pi 5 with Raspian, Docker, and Ros2. 
+This section will walk you through configuring the Raspberry Pi 5 with Raspberry Pi OS, Docker, and ROS2. 
 
 ## Requirements
 - Raspberry Pi 5
@@ -107,7 +107,7 @@ This section will walk you through configuring the Raspberry Pi 5 with Raspian, 
 
 ## Connect Xbox Core (Series S, X, etc) Controller
 
-1. Connect the controller via Rapsian's Bluetooth UI or via terminal.
+1. Connect the controller via Raspberry Pi OS's Bluetooth UI or via terminal.
 
 ## Update Docker User Config
 

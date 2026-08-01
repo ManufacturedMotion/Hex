@@ -47,9 +47,9 @@ Hex3 runs ROS2 inside a Docker container on the Pi. Xbox controller input flows 
 
 See the [Common Commands](common-commands.md) page for how to launch this stack and the individual nodes, and the [Raspberry Pi Setup](raspberry-pi.md) page for configuring the Pi itself.
 
-Each leg's real-time control loop (motor PID, encoder reads, toe sensing, and CAN messaging) runs as firmware on that leg's Xiao RP2350 — see [Real-Time Firmware](firmware-setup.md) for building and flashing it, and [Electronics Setup](electronics-setup.md) for wiring and calibration.
+Each leg's real-time control loop (motor PID, encoder reads, toe sensing, and CAN messaging) runs as firmware on that leg's Xiao RP2350 — see [Real-Time Firmware](firmware-setup.md) for building, flashing, and calibrating it, and [Electronics Setup](electronics-setup.md) for wiring.
 
-Fully 3D printed body and legs — see [Mechanical Assembly](mechanical-assembly.md) for print recommendations.
+Fully 3D printed body and legs — see [3D Printing](3d-printing.md) for print recommendations.
 
 ---
 
