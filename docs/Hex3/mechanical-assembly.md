@@ -1,15 +1,4 @@
-
-## Print Recommendations
+## Assembly Steps
 
 !!! note
-    PETG can be used, but we recommend printing in ABS or ASA for better strength and heat resistance.
-    
-All structural parts are sliced in PrusaSlicer using the `0.2mm STRUCTURAL` print profile on a Prusa Core ONE.
-
-| Parts | Walls | Infill | Supports |
-|---|---|---|---|
-| Default (most parts) | 4 | 30% triangles | As needed |
-| `base_core` & toes | 12+ | 30% triangles | As needed |
-
-- `base_core` see the highest structural loads, so it's printed with 12+ walls to make them effectively solid rather than relying on infill.
-- The toes are also printed with these settings as they will wear down over time.
+    Step-by-step assembly instructions are still being written up. In the meantime, refer to the [CAD models](https://github.com/ManufacturedMotion/Hex/tree/main/Hex3_resources/cad) for how parts fit together, and see [3D Printing](3d-printing.md) for print settings before you start.

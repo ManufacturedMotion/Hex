@@ -9,7 +9,7 @@ The following are commands used to setup or run a docker container for our envir
 * `./new_dev_shell.sh`
   *  opens a new shell in the container
 
-## Ros2 Packages & Nodes
+## ROS2 Packages & Nodes
 These commands are expected to be run inside of a development container (see above)
 
 Hex3 drives its legs over CAN instead of a Teensy over serial. Joystick input flows through `control` into `tripod_gait`, which is turned into per-leg targets by `inverse_kinematics`, and finally dispatched to the motors by the `can` package.

@@ -17,10 +17,13 @@ nav:
   - Hex3:
       - Hex3/index.md
       - Common Commands: Hex3/common-commands.md
-      - Electronics Setup: Hex3/electronics-setup.md
-      - Mechanical Assembly: Hex3/mechanical-assembly.md
       - Raspberry Pi: Hex3/raspberry-pi.md
-      - Real-Time Firmware: Hex3/firmware-setup.md
+      - Assembly Instructions:
+          - Hex3/assembly-instructions.md
+          - 3D Printing: Hex3/3d-printing.md
+          - Mechanical Assembly: Hex3/mechanical-assembly.md
+          - Electronics Setup: Hex3/electronics-setup.md
+          - Real-Time Firmware: Hex3/firmware-setup.md
   - Hex4:
       - Hex4/index.md
   - Meet the Team: meet-the-team.md
