@@ -8,6 +8,7 @@ This folder contains the Hex3 PCB resources, including the latest leg and main P
 
 - `V2.0` - earlier leg board revision.
 - `V3.2` - improved leg board revision.
+
 (Both of these boards were used on the hexapods during OpenSauce 2026)
 
 ## Key Differences
@@ -17,7 +18,7 @@ This folder contains the Hex3 PCB resources, including the latest leg and main P
     - added split termination to our canbus circuit
       - NOTE: our testing showed this feature actually introduced issues. If using the V2.0 design, you will need to cut the traces to remove connection to the split termination circuit. See our GitHub Pages for HEX3 PCB assembly for instructions
       > TODO - add link to page once written
-    - added a diode to prevent power issues when connecting to the Xiao via USB
+    - added a diode to prevent power issues when connecting to the Xiao RP2350 via USB
     - 470uF capacitor to stabilize power supply to the Xiao RP2350
     - swaps the polarized DRV capacitors from SMT to through hole for easier assembly
       - for some reason, for the original V1.0 boards, we decided to solder the SMT capacitors by hand instead of having it done by a machine...
@@ -45,7 +46,7 @@ This folder contains the Hex3 PCB resources, including the latest leg and main P
 
 ## Ordering
 
-PCBs were ordered from JLCPCB, but any PCB vendor that supports ASM should work
+PCBs were ordered from JLCPCB, but any PCB vendor that supports ASM should work. Both the main and leg PCBs are designed as 4 layer PCBs
 
 > For convenience and as an example, the BOM and CPL files from our last order have been added only to the `leg_board/V3.2` board folder.
 >> Our order was a bulk order for 25 boards. If using these files as a reference, please adjust the quantities accordingly.
