@@ -48,7 +48,7 @@ This folder contains the Hex3 PCB resources, including the latest leg and main P
 
 PCBs were ordered from JLCPCB, but any PCB vendor that supports ASM should work. Both the main and leg PCBs are designed as 4 layer PCBs
 
-> For convenience and as an example, the BOM and CPL files from our last order have been added only to the `leg_board/V3.2` board folder.
+> For convenience and as an example, the BOM and CPL files from our last order have been added only to the `leg_board/` folders.
 >> Our order was a bulk order for 25 boards. If using these files as a reference, please adjust the quantities accordingly.
 
 
