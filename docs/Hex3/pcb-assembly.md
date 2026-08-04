@@ -69,6 +69,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 #### For users with leg PCB V3.2:
 - there is a required software update to account for the new design's connector positions
 - please make the following updates to our [leg.cpp](../../Hex3/real_time/teensy_code/lib/HexapodController/src/leg.cpp) file before uploading to your Xiao boards
+  
 `Line 53`
 ```
   -  axes[0].link(D8, D10, 5, mux);
@@ -87,9 +88,6 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
     axes[2].link(D8, D10, 5, mux);
 ```
 
-
-<u>Repeat 5 more times so you have a total of 6 leg PCBs!</u>
-
 ### Verification Checks
 
 - Check for solder bridges, cold joints, or misaligned components.
@@ -97,6 +95,8 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 - Don't forget to insert a mini blade fuse into the fuse block before your poweron test! For the leg board we are using 10A fuses.
 - We suggest connecting each leg board to a power supply (one at a time) and confirming the LEDs and Xiao operate properly prior to testing connection with the main PCB.
 - Don't forget to trim the extra length of the legs on the through hole radial capactiors to prevent any shorted connections!
+
+<u>Repeat the above instructions 5 more times so you have a total of 6 leg PCBs!</u>
 
 ## Main PCB
 
