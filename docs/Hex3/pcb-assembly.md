@@ -13,6 +13,9 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 
 ## Leg PCB
 
+![Hex3 Leg V2.0](images/HEX3_leg_V2.0_overhead.jpg)
+![Hex3 Leg V3.2](images/HEX3_leg_V3.2_overhead.jpg)
+
 ### Parts List (for 1 leg PCB)
 - 1x Xiao RP2350 (no headers attached)
 - 1x 3557 Fuse block
@@ -44,8 +47,10 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
     - then solder the male header pins to the Xiao board
       - if you are using the header pins and pogo pins from our Hex3 BOM, we suggest soldering the male pins to the Xiao in a unique fashion, to ensure the pogo pins make solid contact with the pads on the bottom of the Xiao
       - instead of having the Xiao rest on top of the male header pins, insert the pins through the top of the Xiao. (see picture below)
+      ![Hex3 RP2350 Header Example](images/XIAO_RP2350_pin_example.jpg)
     - place the pogo pins on the PCB, and then plug the Xiao into the female header pins. Inspect the alignment of the tip of the pogo pins and the pads on the bottom of the Xiao. If the alginment is good, solder the pogos to the PCB
 2. If you are using **V3.2 of the board you may skip this step**, as the diode is now SMT and part of the PCB ASM. If you are using **V2.0, solder the diode to the board now. The cathode of the diode should be on the side closer to the Xiao**
+![Hex3 Leg PCB Diode](images/HEX3_leg_V2.0_diode_view.jpg)
 3. Solder the 3557 fuse block to the PCB. **Be sure to hold the soldering iron to the pins of the block for long enough such that an adequate amount of heat builds up before applying your solder**
 4. JSTS
   - solder the 4 pin JSTs for the encoders
@@ -64,7 +69,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 
 #### For users with leg PCB V2.0:
 - the traces for the split termination canbus will need to be cut! See the below image and cut the traces in the same location (these traces are on the bottom of the PCB)
-> TODO - add picture
+![Hex3 V2.0 PCB Cut Traces](images/HEX3_leg_V2.0_bottom.jpg)
 
 #### For users with leg PCB V3.2:
 - there is a required software update to account for the new design's connector positions
@@ -134,6 +139,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 3. Solder the 2x40 Female Header Pin Connector to the board, **with the pins protruding through the top of the PCB**. The main PCB will plug into the Pi and rest on top of it. 
 4. Solder the DC-DC Buck Convertors to the PCB. **Be sure to get the proper polarity alignment. The block on the buck converters should be facing upwards, away from the PCB. The voltage input for the DC-DC converters should be on the left side of the board, closest to the XT60 connector.** 
 5. Add a 1x2 Male Header connection to the slot in the center of the board. Alternatively, you can just short these two pads together, or solder a looped wire, etc.. This connection is used to enable a 120 Ohm resistor on the canbus network.
+![Hex3 Main PCB Jumper](images/HEX3_main_jumper_view.jpg)
 6. Solder your JSTs
   - At a minumum, the required connections are the two 3 Pin JSTs for the cooling fans
   - The other JSTs (outlined above) are all optional
@@ -141,6 +147,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 8. Capacitors
   - Solder the 10uF capacitor to the slot on the board. **Be sure to follow the correct polarity when placing the capacitor! The cathode of the 10uF capacitor should face towards the bottom of the board (facing away from the XT60 / towards the Molex's)**
   - Solder the 470uF capacitor across the input terminals on the upper DC-DC converter. **The cathode should be facing the negative input, and the anode should be facing the positive input**
+![Hex3 Main PCB Capacitors](images/HEX3_main_capacitor_view.jpg)
 
 ### Verification Checks
 
