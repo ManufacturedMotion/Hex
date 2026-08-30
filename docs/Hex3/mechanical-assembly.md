@@ -135,7 +135,7 @@ It is up to you how you would like to batch the parts needed for a leg assembly.
 1. Attach the base lower using M4 screws. The long M3 screws should go through the base lower, and into the S0 attachment.
 1. Carefully insert the leg assemblies into the sides of the hexapod, meshing each leg's S1 hub gear with the S0 driven gear (refer to the CAD if gear alignment is unclear), and taking care to align the 3 M3 screws on the base upper and base lower.
 
-![Assembled Robot Without Lid](images/assembled_robot_without_lid.jpeg)
+    ![Assembled Robot Without Lid](images/assembled_robot_without_lid.jpeg)
 
 1. Install the Raspberry Pi and wire in the power switches onto the base upper. Attach the base upper in place.
 1. Assembly is complete!
