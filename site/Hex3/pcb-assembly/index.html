@@ -1,0 +1,1539 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Hex project">
+      
+      
+      
+        <link rel="canonical" href="https://manufacturedmotion.github.io/Hex/Hex3/pcb-assembly/">
+      
+      
+        <link rel="prev" href="../3d-printing/">
+      
+      
+        <link rel="next" href="../electronics-setup/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>PCB Assembly - Hex Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pcb-assembly" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hex Docs" class="md-header__button md-logo" aria-label="Hex Docs" data-md-component="logo">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hex Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PCB Assembly
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ManufacturedMotion/Hex" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hex Docs" class="md-nav__button md-logo" aria-label="Hex Docs" data-md-component="logo">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    Hex Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ManufacturedMotion/Hex" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hex1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hex2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hex2/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hex2/common-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Instructions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Assembly Instructions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly-instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCB Assembly
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCB Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools-and-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leg-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leg PCB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leg PCB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parts-list-for-1-leg-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts List (for 1 leg PCB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-assembly-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Assembly Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-leg-pcb-version-differences-do-not-skip-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Leg PCB Version Differences (DO NOT SKIP THIS!!)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Leg PCB Version Differences (DO NOT SKIP THIS!!)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users-with-leg-pcb-v20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users with leg PCB V2.0:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-users-with-leg-pcb-v32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users with leg PCB V3.2:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main PCB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main PCB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parts-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-assembly-order_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Assembly Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-checks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../electronics-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electronics Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanical-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanical Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firmware-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hex4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meet-the-team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meet the Team
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools-and-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools and Components
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leg-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leg PCB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Leg PCB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parts-list-for-1-leg-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts List (for 1 leg PCB)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-assembly-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Assembly Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#special-leg-pcb-version-differences-do-not-skip-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Special Leg PCB Version Differences (DO NOT SKIP THIS!!)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Leg PCB Version Differences (DO NOT SKIP THIS!!)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-users-with-leg-pcb-v20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users with leg PCB V2.0:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-users-with-leg-pcb-v32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For users with leg PCB V3.2:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main PCB
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main PCB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parts-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parts List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-assembly-order_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Assembly Order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-checks_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification Checks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="pcb-assembly">PCB Assembly</h1>
+<p>This page is intended to collect assembly instructions for the Hex3 printed circuit boards, including the two leg PCB revisions and the main PCB.</p>
+<h2 id="tools-and-components">Tools and Components</h2>
+<ul>
+<li>Soldering iron and soldering accessories</li>
+<li>Flux and solder</li>
+<li>Multimeter for continuity and polarity checks</li>
+<li>PCB holder or vise (recommended)</li>
+<li>ESD-safe handling practices (recommended)</li>
+<li>Relevant parts, BOM and board revision documentation</li>
+</ul>
+<h2 id="leg-pcb">Leg PCB</h2>
+<p><img alt="Hex3 Leg V2.0" src="../images/HEX3_leg_V2.0_overhead.jpg" />
+<img alt="Hex3 Leg V3.2" src="../images/HEX3_leg_V3.2_overhead.jpg" /></p>
+<h3 id="parts-list-for-1-leg-pcb">Parts List (for 1 leg PCB)</h3>
+<ul>
+<li>1x Xiao RP2350 (no headers attached)</li>
+<li>1x 3557 Fuse block</li>
+<li>3x 4 Pin JST Board Connector</li>
+<li>grab a 4th 4 Pin JST if you will use the extra I2C connection! (this is an optional breakout connection. Our current software does not require this to be connected)</li>
+<li>1x 5 Pin JST Board Connector</li>
+<li>1x 4 Pin Molex Board Connector</li>
+<li>4x 2 Pin Molex Board Connector</li>
+<li>4x 22uF Radial Capacitor</li>
+<li>1x 470uF Radial Capacitor</li>
+<li>1x Leg PCB (V2.0 OR V3.2)</li>
+<li>V2.0:<ul>
+<li>1x 1N5819 Diode</li>
+</ul>
+</li>
+<li>V3.2:<ul>
+<li>2x 4 Pin POGO Connector (Optional)</li>
+<li>2x 7 Pin Short Male Header Pin (Optional)</li>
+<li>2x 7 Pin Short Female Header Pin (Optional)</li>
+</ul>
+</li>
+</ul>
+<h3 id="recommended-assembly-order">Recommended Assembly Order</h3>
+<ol>
+<li>We have found it is easiest to start with the Xiao RP2350. If you are using V3.2 you can opt to use header pins for this connection. V2.0 does not have header pin support</li>
+<li>surface mounted Xiao suggestions<ul>
+<li>we have had good success by starting with the top pins on the Xiao. Pick any two diagonal pins, and solder these joints with a small amount of solder. Be sure to visually inspect the top pins and the alignment with the PCB's solder pads such that each side of the Xiao is evenly spaced, and all pins are centered.</li>
+<li>once you have two connections on the top, flip the PCB over. Inspect the through holes on the bottom of the PCB, and make sure the solder pads on the bottom of the Xiao are centered to these holes. If the holes are not centered, flip the board. Heat one corner of the Xiao to loosen it, and gently apply a force to rotate it. Repeat until the holes are centered with the pads on the bottom of the Xiao.</li>
+<li>once the bottom holes are aligned, you may now solder all of the pins on the top of the Xiao board</li>
+<li>once the top is finished, move to the bottom. For these connections we found it is best to use a thin soldering iron tip, and apply heat to the hole and Xiao SMT pad at the same time. Once the copper has had time to heat up, fill the hole with solder, and let the soldering iron remain in the solder for a bit to ensure all solder &amp; copper is warm. Remove the soldering iron and make sure the hole was not overfilled, and there are no shorts to the neighboring holes</li>
+</ul>
+</li>
+<li>Header pin Xiao suggestions<ul>
+<li>first solder the female header pins to the PCB</li>
+<li>then solder the male header pins to the Xiao board</li>
+<li>if you are using the header pins and pogo pins from our Hex3 BOM, we suggest soldering the male pins to the Xiao in a unique fashion, to ensure the pogo pins make solid contact with the pads on the bottom of the Xiao</li>
+<li>instead of having the Xiao rest on top of the male header pins, insert the pins through the top of the Xiao. (see picture below)
+  <img alt="Hex3 RP2350 Header Example" src="../images/XIAO_RP2350_pin_example.jpg" /></li>
+<li>place the pogo pins on the PCB, and then plug the Xiao into the female header pins. Inspect the alignment of the tip of the pogo pins and the pads on the bottom of the Xiao. If the alignment is good, solder the pogos to the PCB</li>
+</ul>
+</li>
+<li>If you are using <strong>V3.2 of the board you may skip this step</strong>, as the diode is now SMT and part of the PCB ASM. If you are using <strong>V2.0, solder the diode to the board now. The cathode of the diode should be on the side closer to the Xiao</strong>
+<img alt="Hex3 Leg PCB Diode" src="../images/HEX3_leg_V2.0_diode_view.jpg" /></li>
+<li>Solder the 3557 fuse block to the PCB. <strong>Be sure to hold the soldering iron to the pins of the block for long enough such that an adequate amount of heat builds up before applying your solder</strong></li>
+<li>JSTS</li>
+<li>solder the 4 pin JSTs for the encoders</li>
+<li>optionally, you may solder a 4th JST to the I2C breakout connection</li>
+<li>solder the 5 pin JST for the toe sensor</li>
+<li>molex</li>
+<li>solder the 4 pin Molex for the main power supply / canbus connection with the main PCB</li>
+<li>solder the 2 pin Molex connectors for the motors</li>
+<li>capacitors</li>
+<li>solder the 22uF capacitors for the motor circuits. <strong>Be sure to follow the correct polarity when placing the capacitors! The cathode of the 22uF capacitors should face towards the 2 pin Molex connectors</strong></li>
+<li>solder the 470uF capacitor for the Xiao. <strong>Be sure to follow the correct polarity when placing the capacitors!</strong><ul>
+<li><strong>for V2.0 the cathode faces towards the fuse block / 4 pin Molex connector</strong></li>
+<li><strong>for V3.2 we changed the alignment, so all capacitors share the same orientation. The cathode for the 470uF capacitor on V3.2 should face towards the Xiao USB</strong></li>
+</ul>
+</li>
+</ol>
+<h3 id="special-leg-pcb-version-differences-do-not-skip-this">Special Leg PCB Version Differences (DO NOT SKIP THIS!!)</h3>
+<h4 id="for-users-with-leg-pcb-v20">For users with leg PCB V2.0:</h4>
+<ul>
+<li>the traces for the split termination canbus will need to be cut! See the below image and cut the traces in the same location (these traces are on the bottom of the PCB)
+<img alt="Hex3 V2.0 PCB Cut Traces" src="../images/HEX3_leg_V2.0_bottom.jpg" /></li>
+</ul>
+<h4 id="for-users-with-leg-pcb-v32">For users with leg PCB V3.2:</h4>
+<ul>
+<li>there is a required software update to account for the new design's connector positions</li>
+<li>please make the following updates to our <a href="https://github.com/ManufacturedMotion/Hex3/blob/main/real_time/xiao_code/lib/HexapodController/src/leg.cpp">leg.cpp</a> file before uploading to your Xiao boards</li>
+</ul>
+<p><code>Line 53</code>
+<div class="highlight"><pre><span></span><code>  -  axes[0].link(D8, D10, 5, mux);
+  +  axes[0].link(D17, D18, 7, mux);
+</code></pre></div>
+<code>Line 55</code>
+<div class="highlight"><pre><span></span><code>  -  axes[2].link(D17, D18, 7, mux);
+  +  axes[2].link(D8, D10, 5, mux);
+</code></pre></div></p>
+<p><strong>your file should look like this after making the updates:</strong>
+<div class="highlight"><pre><span></span><code>    axes[0].link(D17, D18, 7, mux);
+    axes[1].link(D11, D12, D15, D16, 6, mux);
+    axes[2].link(D8, D10, 5, mux);
+</code></pre></div></p>
+<h3 id="verification-checks">Verification Checks</h3>
+<ul>
+<li>Check for solder bridges, cold joints, or misaligned components.</li>
+<li>Verify connector orientation and polarity before powering the board.</li>
+<li>Don't forget to insert a mini blade fuse into the fuse block before your poweron test! For the leg board we are using 10A fuses.</li>
+<li>We suggest connecting each leg board to a power supply (one at a time) and confirming the LEDs and Xiao operate properly prior to testing connection with the main PCB.</li>
+<li>Don't forget to trim the extra length of the legs on the through hole radial capacitors to prevent any shorted connections!</li>
+</ul>
+<p><u>Repeat the above instructions 5 more times so you have a total of 6 leg PCBs!</u></p>
+<h2 id="main-pcb">Main PCB</h2>
+<h3 id="parts-list">Parts List</h3>
+<ul>
+<li>1x 3557 Fuse Block</li>
+<li>1x 10uF Radial Capacitor</li>
+<li>1x 470uF Radial Capacitor</li>
+<li>1x XT60 Board Connector</li>
+<li>1x 2 Pin Male Header Pin</li>
+<li>1x 2 by 40 Female Header Pin for Raspberry Pi</li>
+<li>2x DC-DC Buck Converter</li>
+<li>6x 4 Pin Molex Board Connector</li>
+<li>we actually have solder connections for up to 8x 4 Pin Molex Board Connectors! Since it is a shared canbus and power connection, you can solder your 6 to any of the connection points. You can also choose to solder the other breakouts and update the software to use 8 legs!</li>
+<li>2x 3 Pin JST Board Connectors</li>
+<li>Optional JST Breakouts</li>
+<li>we included optional breakouts for the following Pi connections:<ul>
+<li>1x 3 Pin JST - LED Ring </li>
+<li>1x 3 Pin JST - PWM0</li>
+<li>1x 3 Pin JST - PWM1</li>
+<li>3x 4 Pin JST</li>
+<li>UART0</li>
+<li>UART1</li>
+<li>I2C</li>
+<li>4x 5 Pin JST (numbered pins refer to Pi GPIO pins)</li>
+<li>5V, 4, 27, 22, GND</li>
+<li>5V, 11, 6, 26, GND</li>
+<li>5V, 18, 23, 25, GND</li>
+<li>SPI1 </li>
+</ul>
+</li>
+</ul>
+<h3 id="recommended-assembly-order_1">Recommended Assembly Order</h3>
+<ol>
+<li>Solder the XT60 Connector to the PCB. <strong>Be sure to hold the soldering iron to the pins of the connector long enough for an adequate amount of heat to build up before applying your solder</strong></li>
+<li>Solder the 3557 fuse block to the PCB. <strong>Be sure to hold the soldering iron to the pins of the block for long enough such that an adequate amount of heat builds up before applying your solder</strong></li>
+<li>Solder the 2x40 Female Header Pin Connector to the board, <strong>with the pins protruding through the top of the PCB</strong>. The main PCB will plug into the Pi and rest on top of it. </li>
+<li>Solder the DC-DC Buck Convertors to the PCB. <strong>Be sure to get the proper polarity alignment. The block on the buck converters should be facing upwards, away from the PCB. The voltage input for the DC-DC converters should be on the left side of the board, closest to the XT60 connector.</strong> </li>
+<li>Add a 1x2 Male Header connection to the slot in the center of the board. Alternatively, you can just short these two pads together, or solder a looped wire, etc.. This connection is used to enable a 120 Ohm resistor on the canbus network.
+<img alt="Hex3 Main PCB Jumper" src="../images/HEX3_main_jumper_view.jpg" /></li>
+<li>Solder your JSTs</li>
+<li>At a minimum, the required connections are the two 3 Pin JSTs for the cooling fans</li>
+<li>The other JSTs (outlined above) are all optional</li>
+<li>Solder your Molex connectors</li>
+<li>Capacitors</li>
+<li>Solder the 10uF capacitor to the slot on the board. <strong>Be sure to follow the correct polarity when placing the capacitor! The cathode of the 10uF capacitor should face towards the bottom of the board (facing away from the XT60 / towards the Molex's)</strong></li>
+<li>Solder the 470uF capacitor across the input terminals on the upper DC-DC converter. <strong>The cathode should be facing the negative input, and the anode should be facing the positive input</strong>
+<img alt="Hex3 Main PCB Capacitors" src="../images/HEX3_main_capacitor_view.jpg" /></li>
+</ol>
+<h3 id="verification-checks_1">Verification Checks</h3>
+<ul>
+<li>Verify that all connectors are installed in the correct orientation.</li>
+<li>Check for shorts around power paths and regulators.</li>
+<li>Don't forget to insert a mini blade fuse into the fuse block before your poweron test! For the leg board we are using a 20A fuse.</li>
+<li>We suggest first connecting the main PCB to a power supply to ensure proper voltage is supplied to the Pi's 5V input and the 24V line for the 4 Pin Molex connectors. It is strongly encouraged that you do this test BEFORE connecting your Raspberry Pi.</li>
+<li>After ensuring proper voltage levels, you can connect the main board to a leg board and test that the leg board receives power once you power on the main board. </li>
+<li>Don't forget to trim the extra length of the legs on the through hole radial capacitors to prevent any shorted connections!</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

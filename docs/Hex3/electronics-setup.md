@@ -1,3 +1,5 @@
+# Electronics Setup
+
 ## Power Wiring
 
 The power for the Hexapod comes from a 5Ah Milwaukee M18 battery. Power is sent to the main PCB and distributed from there. A relay handles turning the Hexapod on and off via a latching power switch.
@@ -63,4 +65,7 @@ Follow [these Raspberry Pi docs](https://www.raspberrypi.com/documentation/compu
 | Main PCB <> Leg PCB | 4 Pin Molex Microfit 3.0 Plug | 4 Pin Molex Microfit 3.0 Plug | 250 mm | 2 Conductor 18 AWG + 2 Conductor Twisted Pair 24 AWG | 1* |
 
 *Used for the leg behind the battery connection.
+
+!!! note
+    When soldering the encoder wires directly to the S0/S1/S2 encoder boards, keep the solder joints close to flush with the board. Solder that sits proud can stick up higher than the nearby capacitors, which will prevent the encoder from sitting flush once mounted (see the [Mechanical Assembly](mechanical-assembly.md) note that encoders must be installed fully flush).
 

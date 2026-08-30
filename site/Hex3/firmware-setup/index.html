@@ -1,0 +1,1341 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for the Hex project">
+      
+      
+      
+        <link rel="canonical" href="https://manufacturedmotion.github.io/Hex/Hex3/firmware-setup/">
+      
+      
+        <link rel="prev" href="../mechanical-assembly/">
+      
+      
+        <link rel="next" href="../raspberry-pi/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Real-Time Firmware - Hex Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#real-time-firmware-xiao-rp2350" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hex Docs" class="md-header__button md-logo" aria-label="Hex Docs" data-md-component="logo">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hex Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Real-Time Firmware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ManufacturedMotion/Hex" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hex Docs" class="md-nav__button md-logo" aria-label="Hex Docs" data-md-component="logo">
+      
+  <img src="../../images/favicon.png" alt="logo">
+
+    </a>
+    Hex Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ManufacturedMotion/Hex" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hex1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hex2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hex2/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Hex2/common-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Instructions
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Assembly Instructions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../assembly-instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assembly Instructions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-printing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D Printing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pcb-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PCB Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../electronics-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electronics Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mechanical-assembly/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mechanical Assembly
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Firmware
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Real-Time Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-open-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Open the Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-your-user_confighpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create Your user_config.hpp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-build-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Build &amp; Upload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-leg-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Leg Calibration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ad-hoc-hardware-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ad-Hoc Hardware Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../raspberry-pi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raspberry Pi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../common-commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Common Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Hex4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hex4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hex4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../meet-the-team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meet the Team
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-open-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Open the Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-your-user_confighpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Create Your user_config.hpp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-build-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Build &amp; Upload
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-leg-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Leg Calibration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ad-hoc-hardware-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ad-Hoc Hardware Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="real-time-firmware-xiao-rp2350">Real-Time Firmware (Xiao RP2350)</h1>
+<p>Each of Hex3's six legs carries its own <a href="https://www.seeedstudio.com/Seeed-Studio-XIAO-RP2350-p-5944.html">Seeed Xiao RP2350</a>, running the firmware in <code>real_time/xiao_code</code>. It drives that leg's three axis motors and encoders, reads the toe (foot contact) sensor, and talks to the Raspberry Pi over CAN.</p>
+<p>This page covers building, flashing, and calibrating that firmware. For wiring, see <a href="../electronics-setup/">Electronics Setup</a>.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/">VS Code</a> with the <a href="https://platformio.org/platformio-ide">PlatformIO IDE extension</a> (this is the recommended extension listed in the project's <code>.vscode/extensions.json</code>)</li>
+<li>A Seeed Xiao RP2350, connected via USB</li>
+</ul>
+<p>Library dependencies (<code>RP2040_PWM</code>, <code>PID</code>, <code>RP2040PIO_CAN</code>, and the Adafruit <code>VL6180X</code> toe-sensor driver) are declared in <code>platformio.ini</code> and installed automatically by PlatformIO.</p>
+<h2 id="1-open-the-project">1. Open the Project</h2>
+<ol>
+<li>Open VS Code and install the PlatformIO IDE extension if you haven't already.</li>
+<li>Use <strong>Open Folder</strong> and select <code>real_time/xiao_code</code>. PlatformIO will pick up <code>platformio.ini</code>, which targets the <code>seeed_xiao_rp2350</code> environment.</li>
+</ol>
+<h2 id="2-create-your-user_confighpp">2. Create Your <code>user_config.hpp</code></h2>
+<p><code>user_config.hpp</code> is intentionally left out of git, since it holds per-board settings, so you need to create your own copy before the firmware will build.</p>
+<ol>
+<li>Copy <code>lib/HexapodController/TEMPLATE_user_config.hpp</code> to <code>lib/HexapodController/src/user_config.hpp</code>.</li>
+<li>Set <code>LEG_NUMBER</code> to the leg (<code>0</code>-<code>5</code>) this board is mounted on. This must be unique per leg — it also determines the board's CAN node ID (<code>0x100 + LEG_NUMBER</code> for commands from the Pi, <code>0x180 + LEG_NUMBER</code> for replies), which is how the Pi's <code>can</code> ROS2 node addresses each leg individually.</li>
+<li>Set <code>LOG_LEVEL</code> and <code>TELEMETRY_LOGGING_SPACE</code> for how much serial telemetry you want while debugging.</li>
+<li>Add or select a <code>#ifdef &lt;YOUR_NAME&gt; ... #endif</code> calibration block for this leg in <code>lib/HexapodController/src/config.hpp</code>, following the <a href="#4-leg-calibration">Leg Calibration</a> steps to generate the <code>ZERO_POINTS</code> values.</li>
+</ol>
+<h2 id="3-build-upload">3. Build &amp; Upload</h2>
+<p>With the <code>seeed_xiao_rp2350</code> environment selected in PlatformIO:</p>
+<ol>
+<li><strong>Build</strong> to compile the firmware.</li>
+<li><strong>Upload</strong> while the Xiao is connected over USB.</li>
+<li>Open the PlatformIO <strong>Serial Monitor</strong> at 115200 baud to confirm the board boots and prints its CAN tx/rx node IDs, along with joint position/velocity/acceleration telemetry.</li>
+</ol>
+<h2 id="4-leg-calibration">4. Leg Calibration</h2>
+<ol>
+<li>
+<p>Create a user profile in the <code>config.hpp</code> file. It should look something like:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifdef USER</span>
+<span class="cp">#define STEP_THRESHOLD 40</span>
+<span class="cp">#define FIFO_IDLE_THRESHOLD 100</span>
+<span class="cp">#define ZERO_POINTS {                    \</span>
+<span class="cp">    {0.547631 + CALIBRATION_OFFSET_A0,   \</span>
+<span class="cp">    -0.836020 + CALIBRATION_OFFSET_A1,  \</span>
+<span class="cp">    2.787243 + CALIBRATION_OFFSET_A2},  \</span>
+<span class="cp">    {0.0 + CALIBRATION_OFFSET_A0,   \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A1,  \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A2}, \</span>
+<span class="cp">    {0.0 + CALIBRATION_OFFSET_A0,   \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A1,   \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A2},  \</span>
+<span class="cp">    {0.0 + CALIBRATION_OFFSET_A0,  \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A1,   \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A2},  \</span>
+<span class="cp">    {0.0 + CALIBRATION_OFFSET_A0,   \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A1,  \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A2},  \</span>
+<span class="cp">    {0.0 + CALIBRATION_OFFSET_A0,   \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A1,  \</span>
+<span class="cp">    0.0 + CALIBRATION_OFFSET_A2}, \</span>
+<span class="cp">}</span>
+
+<span class="p">...</span>
+
+<span class="cp">#endif</span>
+</code></pre></div>
+</li>
+<li>
+<p>To calibrate your legs, set both the config values and calibration offsets to 0.0:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#define ZERO_POINTS {                    \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0}, \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0}, \</span>
+<span class="cp">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Turn off the hexapod and move the leg to the calibration position and plug in the Xiao RP2350 on the mainboard.</p>
+<p><img alt="calibration instructions" src="../images/calibration_instructions.png" /></p>
+<ol>
+<li>S1 should be parallel with the side panel of the hexapod.</li>
+<li>S2 should be as far down as it can go. The 3 wires going into S1 must be laid out flush (the distance between S1 and S2 is exactly 1 wire diameter).</li>
+<li>S3 should be as far up as it can go (the distance between S2 and S3 is exactly 1 wire diameter).</li>
+</ol>
+</li>
+<li>
+<p>Upload main.cpp and turn on the serial monitor. You should see a value like this:</p>
+<div class="highlight"><pre><span></span><code><span class="o">{</span><span class="s2">&quot;Joint&quot;</span>:<span class="w"> </span><span class="o">{</span><span class="s2">&quot;pos&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="m">0</span>.547631,<span class="w"> </span>-0.836020,<span class="w"> </span><span class="m">2</span>.787243<span class="o">]</span>,<span class="w"> </span><span class="s2">&quot;vel&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="m">0</span>.000049,<span class="w"> </span><span class="m">0</span>.006216,<span class="w"> </span><span class="m">0</span>.000052<span class="o">]</span>,<span class="w"> </span><span class="s2">&quot;acc&quot;</span>:<span class="w"> </span><span class="o">[</span>-0.001082,<span class="w"> </span><span class="m">4</span>.619407,<span class="w"> </span>-0.000955<span class="o">]</span>,<span class="w"> </span><span class="s2">&quot;duty&quot;</span>:<span class="w"> </span><span class="o">[</span><span class="m">80</span>.000000,<span class="w"> </span>-80.000000,<span class="w"> </span>-80.000000<span class="o">]}</span>,<span class="w"> </span><span class="s2">&quot;voltage&quot;</span>:<span class="w"> </span><span class="m">0</span>.730000,<span class="w"> </span><span class="s2">&quot;toe&quot;</span>:<span class="w"> </span><span class="m">0</span>.000000<span class="o">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Add the code to the leg you are calibrating. For example, if we were calibrating Leg0:</p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="cp">#define ZERO_POINTS {                    \</span>
+<span class="cp">    {0.547631 + CALIBRATION_OFFSET_A0,   \</span>
+<span class="cp">    -0.836020 + CALIBRATION_OFFSET_A1,  \</span>
+<span class="cp">     2.787243 + CALIBRATION_OFFSET_A2},  \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0}, \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0},  \</span>
+<span class="cp">    {0.0 + 0.0,   \</span>
+<span class="cp">    0.0 + 0.0,  \</span>
+<span class="cp">    0.0 + 0.0}, \</span>
+<span class="cp">}</span>
+</code></pre></div>
+</li>
+<li>
+<p>Upload the code to the leg and make sure it is in a standing position. (Confirm in <code>user_config.hpp</code> that you set the correct <code>LEG_NUMBER</code>).</p>
+</li>
+<li>
+<p>Repeat for all 6 legs.</p>
+</li>
+</ol>
+<h2 id="ad-hoc-hardware-tests">Ad-Hoc Hardware Tests</h2>
+<p><code>test/axis_test.cpp</code> and <code>test/can_test.cpp</code> are standalone bring-up sketches (not PlatformIO unit tests) for exercising a single axis or the CAN transceiver in isolation, independent of the full leg controller — useful when debugging one subsystem at a time.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": "1.0.0"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

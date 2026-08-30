@@ -25,14 +25,14 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 - 1x 4 Pin Molex Board Connector
 - 4x 2 Pin Molex Board Connector
 - 4x 22uF Radial Capacitor
-- 1x 470uF Radial Capactior
+- 1x 470uF Radial Capacitor
 - 1x Leg PCB (V2.0 OR V3.2)
   - V2.0:
     - 1x 1N5819 Diode
   - V3.2:
     - 2x 4 Pin POGO Connector (Optional)
     - 2x 7 Pin Short Male Header Pin (Optional)
-    - 2x 7 Pin Short Femaile Header Pin (Optional)
+    - 2x 7 Pin Short Female Header Pin (Optional)
 
 ### Recommended Assembly Order
 
@@ -48,7 +48,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
       - if you are using the header pins and pogo pins from our Hex3 BOM, we suggest soldering the male pins to the Xiao in a unique fashion, to ensure the pogo pins make solid contact with the pads on the bottom of the Xiao
       - instead of having the Xiao rest on top of the male header pins, insert the pins through the top of the Xiao. (see picture below)
       ![Hex3 RP2350 Header Example](images/XIAO_RP2350_pin_example.jpg)
-    - place the pogo pins on the PCB, and then plug the Xiao into the female header pins. Inspect the alignment of the tip of the pogo pins and the pads on the bottom of the Xiao. If the alginment is good, solder the pogos to the PCB
+    - place the pogo pins on the PCB, and then plug the Xiao into the female header pins. Inspect the alignment of the tip of the pogo pins and the pads on the bottom of the Xiao. If the alignment is good, solder the pogos to the PCB
 2. If you are using **V3.2 of the board you may skip this step**, as the diode is now SMT and part of the PCB ASM. If you are using **V2.0, solder the diode to the board now. The cathode of the diode should be on the side closer to the Xiao**
 ![Hex3 Leg PCB Diode](images/HEX3_leg_V2.0_diode_view.jpg)
 3. Solder the 3557 fuse block to the PCB. **Be sure to hold the soldering iron to the pins of the block for long enough such that an adequate amount of heat builds up before applying your solder**
@@ -73,7 +73,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 
 #### For users with leg PCB V3.2:
 - there is a required software update to account for the new design's connector positions
-- please make the following updates to our [leg.cpp](../../Hex3/real_time/teensy_code/lib/HexapodController/src/leg.cpp) file before uploading to your Xiao boards
+- please make the following updates to our [leg.cpp](https://github.com/ManufacturedMotion/Hex3/blob/main/real_time/xiao_code/lib/HexapodController/src/leg.cpp) file before uploading to your Xiao boards
   
 `Line 53`
 ```
@@ -99,7 +99,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 - Verify connector orientation and polarity before powering the board.
 - Don't forget to insert a mini blade fuse into the fuse block before your poweron test! For the leg board we are using 10A fuses.
 - We suggest connecting each leg board to a power supply (one at a time) and confirming the LEDs and Xiao operate properly prior to testing connection with the main PCB.
-- Don't forget to trim the extra length of the legs on the through hole radial capactiors to prevent any shorted connections!
+- Don't forget to trim the extra length of the legs on the through hole radial capacitors to prevent any shorted connections!
 
 <u>Repeat the above instructions 5 more times so you have a total of 6 leg PCBs!</u>
 
@@ -141,7 +141,7 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 5. Add a 1x2 Male Header connection to the slot in the center of the board. Alternatively, you can just short these two pads together, or solder a looped wire, etc.. This connection is used to enable a 120 Ohm resistor on the canbus network.
 ![Hex3 Main PCB Jumper](images/HEX3_main_jumper_view.jpg)
 6. Solder your JSTs
-  - At a minumum, the required connections are the two 3 Pin JSTs for the cooling fans
+  - At a minimum, the required connections are the two 3 Pin JSTs for the cooling fans
   - The other JSTs (outlined above) are all optional
 7. Solder your Molex connectors
 8. Capacitors
@@ -156,4 +156,4 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 - Don't forget to insert a mini blade fuse into the fuse block before your poweron test! For the leg board we are using a 20A fuse.
 - We suggest first connecting the main PCB to a power supply to ensure proper voltage is supplied to the Pi's 5V input and the 24V line for the 4 Pin Molex connectors. It is strongly encouraged that you do this test BEFORE connecting your Raspberry Pi.
 - After ensuring proper voltage levels, you can connect the main board to a leg board and test that the leg board receives power once you power on the main board. 
-- Don't forget to trim the extra length of the legs on the through hole radial capactiors to prevent any shorted connections!
+- Don't forget to trim the extra length of the legs on the through hole radial capacitors to prevent any shorted connections!

@@ -1,3 +1,5 @@
+# Common Commands
+
 !!! note
     The following are useful commands to have handy when experimenting with or debugging your hexapod.
 
