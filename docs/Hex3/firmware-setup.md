@@ -35,7 +35,7 @@ With the `seeed_xiao_rp2350` environment selected in PlatformIO:
 
 ## 4. Leg Calibration
 
-1. Create a user profile in the `config.cpp` file. It should look something like:
+1. Create a user profile in the `config.hpp` file. It should look something like:
 
     ```cpp
     #ifdef USER
@@ -131,7 +131,7 @@ With the `seeed_xiao_rp2350` environment selected in PlatformIO:
     }
     ```
 
-6. Upload the code to the leg and make sure it is in a standing position. (Confirm in `USER_CONFIG.HPP` that you set the correct `LEG_NUMBER`).
+6. Upload the code to the leg and make sure it is in a standing position. (Confirm in `user_config.hpp` that you set the correct `LEG_NUMBER`).
 
 7. Repeat for all 6 legs.
 

@@ -12,7 +12,10 @@ This section walks through building a Hex3 from parts to a walking hexapod.
         - We recommend also using a 2.5mm drill bit, as manually tightening all the screws is a herculean task.
         - All the hardware, with the exception of the Raspberry Pi and LiDAR connections use 2.5mm hex.
     - Soldering iron and soldering accessories.
+    - Flux and solder.
     - Heat set insert bit for soldering iron.
+    - Multimeter for continuity and polarity checks.
+    - PCB holder or vise (recommended for [PCB Assembly](pcb-assembly.md)).
     - Wire cutter
     - Wire stripper for the gauges listed [here](electronics-setup.md#wire-lengths).
     - A clamp
@@ -27,20 +30,22 @@ This section walks through building a Hex3 from parts to a walking hexapod.
 
 ## Stages
 
-The build is split into five stages, meant to be followed roughly in order:
+The build is split into six stages, meant to be followed roughly in order:
 
 1. [3D Printing](3d-printing.md) — print recommendations for the body and legs.
     - Get these prints kicked off and have them running in the background while working on other assembly steps.
-2. [Electronics Setup](electronics-setup.md) — power wiring, Raspberry Pi wiring, and wire harness lengths.
+2. [PCB Assembly](pcb-assembly.md) — soldering the leg PCBs and the main PCB.
     - Once completed, you should have at least:
-        - 1x power assembly
         - 1x mainboard
         - 6x leg boards
+3. [Electronics Setup](electronics-setup.md) — power wiring, Raspberry Pi wiring, and wire harness lengths.
+    - Once completed, you should have at least:
+        - 1x power assembly
         - 18x encoders
         - 6x toe time-of-flight sensors (optional; not currently implemented)
-3. [Mechanical Assembly](mechanical-assembly.md) — assembling the printed parts and hardware into the hexapod body and legs.
+4. [Mechanical Assembly](mechanical-assembly.md) — assembling the printed parts and hardware into the hexapod body and legs.
     - Once completed, you should have the hexapod fully assembled, with all 6 legs ready for calibration.
-4. [Real-Time Firmware](firmware-setup.md) — building, flashing, and calibrating the per-leg Xiao RP2350 firmware.
-5. [Raspberry Pi Configuration](raspberry-pi.md) — flashing the SD card and getting Raspberry Pi OS, Docker, and ROS2 all configured.
+5. [Real-Time Firmware](firmware-setup.md) — building, flashing, and calibrating the per-leg Xiao RP2350 firmware.
+6. [Raspberry Pi Configuration](raspberry-pi.md) — flashing the SD card and getting Raspberry Pi OS, Docker, and ROS2 all configured.
 
-Once all five stages are complete, head to [Common Commands](common-commands.md) to get the hexapod moving.
+Once all six stages are complete, head to [Common Commands](common-commands.md) to get the hexapod moving.

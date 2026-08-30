@@ -75,7 +75,12 @@ This section will walk you through configuring the Raspberry Pi 5 with Raspberry
 
 ## Automatically Launch CAN at Startup
 
-1. Get your IP:
+1. Install `can-utils`, which provides the `ip link ... type can` support used below, along with `candump`/`cansend` for debugging:
+    ```bash
+    sudo apt install can-utils
+    ```
+
+1. Get the path to `ip`:
     ```bash
     which ip
     ```
@@ -84,14 +89,13 @@ This section will walk you through configuring the Raspberry Pi 5 with Raspberry
     /usr/sbin/ip
     ```
 
-
-1. Create the file `/etc/systemd/system/canbus.service` with the following contents:
+1. Create the file `/etc/systemd/system/canbus.service` with the following contents, using the path from the step above:
 ```bash
     [Unit]
     Description=CAN Bus Interface
 
     [Service]
-    ExecStart=/sbin/ip link set can0 up type can bitrate 500000 #ip from the above step
+    ExecStart=/usr/sbin/ip link set can0 up type can bitrate 500000
     Type=oneshot
     RemainAfterExit=yes
 

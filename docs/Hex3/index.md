@@ -10,7 +10,7 @@ Hex3 is the third generation of our Hexapod platform. Highlights of this generat
 - Drivable via Xbox controller
 - Fully 3D printed body and legs
 - 18 degrees-of-freedom (DOF) design with 3 DOF per leg
-- Custom low-cost servos made using DC gear motors and AS5600 magnetic encoders (as opposed to the hobby-servo's that were prone to overheating on [Hex2](../Hex2/index.md).)
+- Custom low-cost servos made using DC gear motors and AS5600 magnetic encoders (as opposed to the hobby-servos that were prone to overheating on [Hex2](../Hex2/index.md).)
 - Spring loaded toe with position sensor to measure force applied by each leg
 - Three-level control to follow user commands
     - High level whole hexapod gait
@@ -19,7 +19,7 @@ Hex3 is the third generation of our Hexapod platform. Highlights of this generat
 - Custom PCBs for Pi and leg connectivity
 - Standard hardware holding the Hexapod together
 - Modular compute architecture 
-- Deterministic real time compute provided by Xiao Rp2350s
+- Deterministic real time compute provided by Xiao RP2350s
 - ROS2 on Raspberry Pi 5 to allow easy build in to existing robotic development platforms
 
 Price point: ~$2,000 USD. 
