@@ -777,6 +777,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#encoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encoders
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1063,6 +1074,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#encoders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Encoders
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1273,6 +1295,42 @@
 </tbody>
 </table>
 <p>*Used for the leg behind the battery connection.</p>
+<hr />
+<h2 id="encoders">Encoders</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The encoder's DIR pin must be grounded. This is done directly on the encoder board with a small jumper wire between DIR and GND — it is separate from the 4 conductor harness below.</p>
+</div>
+<p><img alt="Encoder Jumper Wire" src="../images/encoder_jumper_wire.jpeg" /></p>
+<p>If using our 4 conductor wire harnesses (see <a href="#wire-lengths">Wire Lengths</a> above), we recommend wiring:</p>
+<table>
+<thead>
+<tr>
+<th>Wire Color</th>
+<th>Signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red</td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>Black</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>SCL</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>SDA</td>
+</tr>
+</tbody>
+</table>
+<p>...for consistency with the connector order on the board.</p>
+<p><img alt="Encoder JST Pinout" src="../images/encoder_JST_pinout.jpeg" /></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When soldering the encoder wires directly to the S0/S1/S2 encoder boards, keep the solder joints close to flush with the board. Solder that sits proud can stick up higher than the nearby capacitors, which will prevent the encoder from sitting flush once mounted (see the <a href="../mechanical-assembly/">Mechanical Assembly</a> note that encoders must be installed fully flush).</p>
