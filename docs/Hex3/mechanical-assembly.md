@@ -57,7 +57,9 @@ It is up to you how you would like to batch the parts needed for a leg assembly.
     1. [S2] 1x installed on the S2 bearing side.
     1. [S2] 1x installed on the S2 gear side.
 
-1. Install the encoders using the encoder helper tool, ensuring that they are fully flush against the part. Be careful not to scrape the PCB when installing. Screws should also be removed from the encoder once mounted.
+1. Install the encoders using the [encoder helper tool](https://github.com/ManufacturedMotion/Hex/tree/main/Hex3_resources/cad), ensuring that they are fully flush against the part. Be careful not to scrape the PCB when installing. Screws should also be removed from the encoder once mounted.
+
+    ![Encoder Insertion Tool](images/encoder_insertion_tool.png)
 
     1. [S0] 1x encoder installed.
     1. [S1] 1x encoder installed with cover (2 screws remain through the cover).

@@ -66,6 +66,28 @@ Follow [these Raspberry Pi docs](https://www.raspberrypi.com/documentation/compu
 
 *Used for the leg behind the battery connection.
 
+---
+
+## Encoders
+
+!!! note
+    The encoder's DIR pin must be grounded. This is done directly on the encoder board with a small jumper wire between DIR and GND — it is separate from the 4 conductor harness below.
+
+![Encoder Jumper Wire](images/encoder_jumper_wire.jpeg)
+
+If using our 4 conductor wire harnesses (see [Wire Lengths](#wire-lengths) above), we recommend wiring:
+
+| Wire Color | Signal |
+|---|---|
+| Red | VCC |
+| Black | GND |
+| Blue | SCL |
+| Green | SDA |
+
+...for consistency with the connector order on the board.
+
+![Encoder JST Pinout](images/encoder_JST_pinout.jpeg)
+
 !!! note
     When soldering the encoder wires directly to the S0/S1/S2 encoder boards, keep the solder joints close to flush with the board. Solder that sits proud can stick up higher than the nearby capacitors, which will prevent the encoder from sitting flush once mounted (see the [Mechanical Assembly](mechanical-assembly.md) note that encoders must be installed fully flush).
 
