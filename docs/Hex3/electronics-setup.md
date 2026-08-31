@@ -77,14 +77,14 @@ Follow [these Raspberry Pi docs](https://www.raspberrypi.com/documentation/compu
 
 If using our 4 conductor wire harnesses (see [Wire Lengths](#wire-lengths) above), we recommend wiring:
 
-| Wire Color | Signal |
-|---|---|
-| Red | VCC |
-| Black | GND |
-| Blue | SCL |
-| Green | SDA |
+| Wire Color | Signal | JST Pin |
+|---|---|---|
+| Red | VCC | 1 |
+| Black | GND | 2 |
+| Blue | SCL | 3 | 
+| Green | SDA | 4 |
 
-...for consistency with the connector order on the board.
+...for consistency with the connector order on the board. 
 
 ![Encoder JST Pinout](images/encoder_JST_pinout.jpeg)
 
