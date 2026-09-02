@@ -68,7 +68,8 @@ It is up to you how you would like to batch the parts needed for a leg assembly.
 ### Assembly
 
 !!! note
-    The grub screw placement on the 15-tooth gear is critical, and varies per motor, so please refer to the CAD for confirmation.
+    The grub screw placement on the 15-tooth gear (this is the small one!) is critical, and varies per motor, so please refer to the CAD for confirmation.
+    We also recommend applying some Blue Loctite to the grub screw when attaching the gear to the motor shaft.
 
 #### S0 Assembly
 
@@ -106,6 +107,7 @@ It is up to you how you would like to batch the parts needed for a leg assembly.
 1. Combine the spring, spring aligner, and toe together with M4x60 screws.
 1. Place the toe assembly into S3. 
 1. Optionally add in the toe distance time-of-flight sensor.
+  - Reminder -- this is an experimental component! The TOF sensor has not been fully implemented in software at the time of writing this documentation. 
 1. Close the assembly using four M4 screws (note: two are M4x30, two are M4x35).
 1. Leave the rest of the assembly to a later part.
 

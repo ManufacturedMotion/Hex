@@ -91,3 +91,18 @@ If using our 4 conductor wire harnesses (see [Wire Lengths](#wire-lengths) above
 !!! note
     When soldering the encoder wires directly to the S0/S1/S2 encoder boards, keep the solder joints close to flush with the board. Solder that sits proud can stick up higher than the nearby capacitors, which will prevent the encoder from sitting flush once mounted (see the [Mechanical Assembly](mechanical-assembly.md) note that encoders must be installed fully flush).
 
+
+## Motors
+
+The polarity of the wiring to the motors does not matter, but you should be consistent with your wiring. The polarity choice will affect [these constants in your config.hpp file](https://github.com/ManufacturedMotion/Hex3/blob/5c3b54bb8905e35a4c63c192355dc47a30cfa154/real_time/xiao_code/lib/HexapodController/src/config.hpp#L79). If you connect the negative terminal of the motor to pin 1 of the Molex connector, you will end up with the following axis inversion values: `{true, false, false}`
+
+## Leg PCB <-> Main PCB Connection Cables 
+
+If using our 4 conductor wire harnesses (see [Wire Lengths](#wire-lengths) above), we recommend wiring:
+
+| Wire Color | Signal | Molex Pin |
+|---|---|---|
+| Purple | GND | 1 |
+| Red | VCC | 2 |
+| Black | CAN LOW | 3 | 
+| White | CAN HIGH | 4 |

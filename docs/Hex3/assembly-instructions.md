@@ -42,7 +42,7 @@ The build is split into six stages, meant to be followed roughly in order:
     - Once completed, you should have at least:
         - 1x power assembly
         - 18x encoders
-        - 6x toe time-of-flight sensors (optional; not currently implemented)
+        - 6x toe time-of-flight sensors (experimental feature; not currently implemented in software)
 4. [Mechanical Assembly](mechanical-assembly.md) — assembling the printed parts and hardware into the hexapod body and legs.
     - Once completed, you should have the hexapod fully assembled, with all 6 legs ready for calibration.
 5. [Real-Time Firmware](firmware-setup.md) — building, flashing, and calibrating the per-leg Xiao RP2350 firmware.
