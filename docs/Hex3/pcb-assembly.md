@@ -13,7 +13,32 @@ This page is intended to collect assembly instructions for the Hex3 printed circ
 
 ## Leg PCB
 
+There are two versions of the Leg PCB available for building the Hex3 platform: **V2.0** and **V3.2**. Both versions are fully functional and can be used to build a complete Hex3 platform. The main differences are in **assembly method, thermal management, PCB cost, and XIAO RP2350 reusability.**
+
+V2.0 is the simpler and more cost-effective design, with components that are straightforward to assemble by hand. V3.2 is a more refined design focused on improved thermal performance and easier XIAO RP2350 replacement/reuse, but comes with increased PCB cost and some additional assembly considerations.
+
+The following sections summarize the main pros and cons of each version.
+
+Leg V2.0:
+- through hole diode
+  - to be soldered by hand
+- DRV8871 motor driver chips do not get additional cooling
+  - external heat sinks can still be applied, but the PCB layout and design was not focused on heat dissipation
+- XIAO RP2350 soldered directly to the PCB
+  - cannot repurpose / reuse the XIAO board 
+
 ![Hex3 Leg V2.0](images/HEX3_leg_V2.0_overhead.jpg)
+
+Leg V3.2:
+- SMT diode
+  - less hand soldering required, but you have to add this part to your ASM part list when placing the order
+- Design has heavy emphasis on increased cooling for the DRV8871 motor driver chips
+  - 2 oz internal copper pours (this increases the price quite a bit!)
+  - via stitching for GND plane 
+- POGO pin option for XIAO RP2350 board
+  - can re-use the XIAO on other projects if desired (no longer soldered directly to the PCB)
+  - POGO pin spacing is sensitive -- you need specific male/female header pins to get a good distance for the POGO compression
+
 ![Hex3 Leg V3.2](images/HEX3_leg_V3.2_overhead.jpg)
 
 ### Parts List (for 1 leg PCB)
