@@ -14,3 +14,5 @@ All structural parts are sliced in PrusaSlicer using the `0.2mm STRUCTURAL` prin
 
 - `base_core` sees the highest structural loads, so it's printed with 12+ walls to make them effectively solid rather than relying on infill.
 - The toes are also printed with these settings as they will wear down over time.
+
+CAD files for Hex3 are available in the [GitHub](https://github.com/ManufacturedMotion/Hex/tree/main/Hex3_resources/cad) or via our [Hex3 Printables project](https://www.printables.com/model/1831798-hex3-an-opensource-hexapod-platform)

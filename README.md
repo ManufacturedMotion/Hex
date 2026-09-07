@@ -6,7 +6,7 @@
 
 Hex is a six legged OpenSource Hexapod designed to serve as a moving platform for you to tinker with and build on top of! 
 
-The current Hexapod release is **Hex3**. Hex4 is currently under development, with a target release date in mid- to late- 2027.
+The current Hexapod release is **Hex3**. Check out our [Hex3 project on Printables!](https://www.printables.com/model/1831798-hex3-an-opensource-hexapod-platform) Hex4 is currently under development, with a target release date in mid- to late- 2027.
 
 Like Tony Stark and his suits, we are continually expanding on the capabilities of the Hexapod platform. Unlike Tony Stark, we hope not to need
 85+ different iterations.
@@ -32,9 +32,10 @@ To find out info on what we're planning to change, [checkout our GitHub issues!]
 
 ### Hex3
 - Codename: Dewey
-- In-Progress: July 2025 - Present
+- In-Progress: July 2025 - September 2026
 - Code: GNU GENERAL PUBLIC LICENSE V3
 - CAD/PCBs: [Open Community License (OCL)](https://github.com/OpenCommunityLicence/OpenCommunityLicence?tab=readme-ov-file#open-community-license-ocl)
+- Printables: [Hex3](https://www.printables.com/model/1831798-hex3-an-opensource-hexapod-platform)
 
 ### Hex4
 - In-Progress: August 2026 - Present
